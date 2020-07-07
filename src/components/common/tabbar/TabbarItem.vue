@@ -37,10 +37,16 @@ export default {
   },
   computed:{
     // 通过计算属性来让tabbar效果改变
-    isActive(){
+    isActive:{
+      get(){
+        return this.$route.path.indexOf(this.path)!==-1
+      },
+      set(v){
+        this.aaa=v
+      }
       // this.$router.path
       // 计算路由地址是否和当前的tabbar相同
-      return this.$route.path.indexOf(this.path)!==-1
+      
     }
   },
   methods:{

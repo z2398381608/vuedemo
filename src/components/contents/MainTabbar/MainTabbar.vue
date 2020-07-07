@@ -1,6 +1,6 @@
 <template>
   <tab-bar>
-    <tab-bar-item path="/home" isColoe="blue">
+    <tab-bar-item path="/home">
       <img slot="item-icon" src="~assets/img/tabbar/home.svg" />
       <img slot="item-icon-active"  src="~assets/img/tabbar/home_active.svg" />
       <div slot="item-text" >首页</div>
@@ -31,9 +31,9 @@
 // TabBar 插槽组件
 // 调用了 webpack.base.conf.js  中的 resolve("src")函数
 // components   webpack的别名中配置的名字
-import TabBar from "components/tabbar/Tabbar";
+import TabBar from "components/common/tabbar/Tabbar.vue";
 // TabBarItem插槽组件
-import TabBarItem from "components/tabbar/TabbarItem.vue";
+import TabBarItem from "components/common/tabbar/TabbarItem.vue";
 
 export default {
   name: "MainTabbar",
